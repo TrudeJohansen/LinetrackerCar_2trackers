@@ -1,4 +1,8 @@
 # LinetrackerCar_2trackers
 Car with two Linetrackers
 
-https://user-images.githubusercontent.com/113107099/202646949-d62992ad-081b-4833-aa97-38534501c26f.png
+The code:
+The main component of our code is a package called directions. This package contains two tasks in our real-time system: sense and act. The sense task reads data from the sensors and ensures that the system's variables are updated. The act task executes the activity based on the system's functionality. Each task runs every 20 milliseconds, and they are concurrent. Furthermore, the ads file has a type that we have called "rettning" which is a set of the operations; Forward, Right, Left and Stop. Then we have the procedures drive and findline. The drive requires a variable of the type "rettning" to set the direction of the car. findLine is the procedure called for if a sensor detects that the car isn't on the line. It finds out if it is the right or left sensor that does not find the line and will then adjust the car according to this information. The truth table shows the direction the car goes for any outcome
+ 
+We also have a protected part of directions.ads called directionobj. This section contains the following private values: dir_value, linetrackerstate_left and linetracerstate_right. Additionally, it contains several procedures and functions. The procedure setDirections receives a value of type "rettning" which it assigns to the value dir_value. The function getDirection simply returns dir_value. The procedure readLinetracker receives two Boolean values. These values should be read from the sensor and are assigned to the values linetracerstate_left and linetrackerstate_right. The last two functions, getlinetracker_Left and getlinetrackerstate_Right return these two values![Uploading image.png…]
+
